@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { use } from 'react';
+import Card from './Card';
+import Pricecrd from '../Desiy/Pricecrd';
 
-const PricingOptions = () => {
+const PricingOptions = ({data}) => {
+    const promiose = use(data);
+    console.log(promiose);
+    
     return (
-        <div>
+        <div className='grid grid-cols-3 gap-6 max-w-[1100px] mx-auto'>
+            {
+                promiose.map(priceas => <Pricecrd priceas={priceas}
+                key={priceas.id}
+                ></Pricecrd>)
+            }
             
         </div>
     );
