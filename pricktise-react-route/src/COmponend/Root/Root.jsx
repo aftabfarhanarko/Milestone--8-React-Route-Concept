@@ -1,9 +1,11 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import Footers from "../Footer/Footers";
 
 const Root = () => {
+    const nevations = useNavigation();
+    const iseNavations = Boolean(nevations.location)
   return (
     <div className="text-center ">
       <Navbar></Navbar>
@@ -12,6 +14,8 @@ const Root = () => {
           <h2>This is a Aside Bar</h2>
         </aside>
         <div className="w-[80%]">
+            {iseNavations && <span className="loading loading-spinner loading-xl"></span>
+}
           <Outlet></Outlet>
         </div>
       </div>
