@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+Nav a.active {
+  color: red;
+  text-decoration: underline;
+}
