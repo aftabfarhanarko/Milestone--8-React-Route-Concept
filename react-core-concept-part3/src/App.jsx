@@ -1,22 +1,22 @@
-import './App.css'
-import AectionForm from './Componentes/AectionForm/AectionForm'
-import SingleForm from './Componentes/SingleForm/SingleForm'
-import UncontoleForm from './Componentes/UncontoleForm/UncontoleForm'
-import HookForm from './HookForm/HookForm'
+import { createContext } from 'react';
+import './App.css';
+import ProducatManaz from './Componentes/ProducatManaz/ProducatManaz';
+import Flowers from './Componentes/Flower/Flowers';
+
+export const Wordes = createContext("");
 
 function App() {
+  const world = "The React is Best Components Libery";
 
   return (
     <>
-
-      <h1>This is React Single Forme</h1>
-      {/* <SingleForm></SingleForm> */}
-      {/* <AectionForm></AectionForm> */}
-      {/* <UncontoleForm></UncontoleForm> */}
-      <HookForm></HookForm>
-  
+      <h1>This is React Single Form</h1>
+      {/* <Wordes.Provider value={world}>
+        <ProducatManaz />
+      </Wordes.Provider> */}
+      <Flowers></Flowers>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
