@@ -23,6 +23,7 @@ const ReadList = () => {
     );
     setReadList(filterItems);
   }, []);
+  
   useEffect(() => {
     const getItemLS = getWhistList();
     const convartPars = getItemLS.map((id) => parseInt(id));
